@@ -10,6 +10,13 @@ function App() {
         <h1>Weather App</h1>
         <WeatherSearch />
       </header>
+      <footer>
+        This project was coded by{" "}
+        <a href="https://amandaventura.netlify.app/">Amanda Ventura</a> and is{" "}
+        <a href="https://github.com/ASV185/weather-react-app">
+          open-sourced on Github
+        </a>
+      </footer>
     </div>
   );
 }
