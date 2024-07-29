@@ -1,7 +1,78 @@
 .Weather {
-  margin: 100px;
+  margin: 70px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  padding: 50px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+    url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/136/104/original/botanic-garden-colorado-33.jpg?1722226303);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: left;
+  padding: 350px 0;
+}
+
+.Weather .btn-primary {
+  border: none;
+  border-radius: 100px;
+  padding: 10px;
+  color: white;
+}
+
+.Weather .forecast {
+  border-radius: 5px;
+  color: white;
+}
+
+.Weather .my-current-location {
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+}
+
+.Weather .city {
+  border-radius: 5px;
+  color: black;
+  font-size: 40px;
+}
+
+.Weather .temperature-information {
+  border-radius: 5px;
+}
+
+.Weather .temperature {
+  font-size: 50px;
+  line-height: 1;
+  color: white;
+}
+
+.Weather .fahrenheit {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.Weather .celsius {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.Weather .icon {
+  border-radius: 5px;
+  font-size: 35px;
 }
 
 .Weather ul {
+  border-radius: 5px;
   list-style: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.Weather li {
+  font-size: 20px;
 }
