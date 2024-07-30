@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <div classsName="container">
         <header className="App-header">
-          <Weather />
+          <Weather defaultCity="El Paso"/>
         </header>
         <footer>
           This project was coded by{" "}
