@@ -1,6 +1,7 @@
-import React, {useState, } from "react";
+import React, {useState} from "react";
 import axios from "axios";
 import "./Weather.css";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const[weatherData, setWeatherData] = useState({ready:false});
@@ -9,7 +10,7 @@ export default function Weather(props) {
     setWeatherData({
       ready:true,
       temperature: response.data.temperature,
-      date: "Tuesday 04:00",
+      date: new Date(response.data.dt * 1000),
       wind:response.data.wind.speed,
       city:response.data.name,
       description:response.data.condition.description,
@@ -38,7 +39,9 @@ export default function Weather(props) {
         <div className="row">
           <div className="card text-bg-dark mb-3 col-3 m-4">
               <h1 className="city p-3 m-1 text-white">El Paso</h1>
-              <span className= "date">{weatherData.date}</span>
+              <span className= "date">
+                <FormattedDate date={weatherData.date}/>
+              </span>
           </div>
           <div className="card text-bg-dark mb-3 col-3 m-4">
               <div className="my-current-location text-center">
@@ -51,11 +54,11 @@ export default function Weather(props) {
             <div className="temperature-information ">
               <span className="temperature">{weatherData.temperature}</span>{" "}
               <span className="units">
-                <a href={"#"} className="fahrenheit">
+                <a href="#" rel="noopener noreferrer"className="fahrenheit">
                   F
                 </a>{" "}
               | {" "}
-                <a href={"#"} className="celsius">
+                <a href="#" rel="noopener noreferrer" className="celsius">
                  {weatherData.temperature} C
                 </a>{" "}
               </span>
